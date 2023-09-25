@@ -2,15 +2,18 @@
 
 import socket
 import subprocess
+import re
 
 class IPaddressScraping:
 	def get_host_ipaddress_lists():
 		_, _, ipaddress_lists = socket.gethostbyname_ex(socket.gethostname())
-		private_ipaddress = '192.168.'
+		private_ipaddress = re.compile(	r'(^10.(([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){2}([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$)|'\
+				 		r'(^172.((1[6-9]|2[0-9]|3[0-1])\.)(([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.)([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$)|'\
+						r'(^192.168.(([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.)([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$)')
 		scraping_ipaddress = []
 
 		for host_ipaddress in ipaddress_lists:
-			if private_ipaddress in host_ipaddress:
+			if private_ipaddress.fullmatch(host_ipaddress) != None:
 				IPaddressScraping.append_list(scraping_ipaddress, host_ipaddress)
 		return scraping_ipaddress
 	
@@ -19,11 +22,11 @@ class IPaddressScraping:
 		return list
 
 	def ipaddress_screping(ipaddress_lists):
-		print(f'\nGet Local IPaddress {ipaddress_lists}\n')
+		print(f'\nGet Local IPaddress {ipaddress_lists}')
 		for scraping_ipaddress in ipaddress_lists:
 
 			# IPaddress Scraping START
-			scraping_execution_decide = input(f'   Do you want to execution IPscraping of {scraping_ipaddress} (y or other) : ')
+			scraping_execution_decide = input(f'\n   Do you want to execution IPscraping of {scraping_ipaddress} (y or other) : ')
 			if scraping_execution_decide.casefold() == 'y':
 				print('---------------------------------')
 				print(f'Target IPaddress:{scraping_ipaddress}')
