@@ -45,7 +45,7 @@ class IPaddressScraping:
 		# Private IPaddress Screping [プライベートIPアドレス スクレイピング]
 		def ipaddress_screping(ipaddress_lists):
 			# Variables Definition [変数定義]
-			timeout = 1
+			timeout = 3
 
 			# Scraping 1-255 Private IPaddress with ICMP Packet [1-255のプライベートIPアドレスをICMPパケットでスクレイピング]
 			# Check Source IPaddress from Contents Responded ICMP Packet [応答したICMPパケットの中身から送信元IPアドレスを確認]
