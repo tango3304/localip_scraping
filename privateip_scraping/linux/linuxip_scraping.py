@@ -50,7 +50,7 @@ class IPaddressScraping:
 			# Scraping 1-255 Private IPaddress with ICMP Packet [1-255のプライベートIPアドレスをICMPパケットでスクレイピング]
 			# Check Source IPaddress from Contents Responded ICMP Packet [応答したICMPパケットの中身から送信元IPアドレスを確認]
 			# Display Source IPaddress on CLI [送信元IPアドレスをCLI上で表示]
-			print(f'\nGet Local IPaddress {ipaddress_lists}')
+			print(f'\nGet Private IPaddress {ipaddress_lists}')
 			for scraping_ipaddress in ipaddress_lists:
 				scraping_execution_decide = input(f'\n   Do you want to execution IPscraping of {scraping_ipaddress} (y or other) : ')
 				if scraping_execution_decide.casefold() == 'y':
