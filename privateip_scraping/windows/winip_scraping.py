@@ -22,7 +22,7 @@ class IPaddressScraping:
 		return list
 
 	def ipaddress_screping(ipaddress_lists):
-		print(f'\nGet Local IPaddress {ipaddress_lists}')
+		print(f'\nGet Private IPaddress {ipaddress_lists}')
 		for scraping_ipaddress in ipaddress_lists:
 
 			# IPaddress Scraping START
