@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "privateip_scraping"
 version = "1.0.2"
 description = "Private IPaddress Scraping"
-requires-python = ">=3.0"
+requires-python = ">=2.0"
 license = {file = "LICENSE"}
 readme = "README.md"
 dependencies = [
