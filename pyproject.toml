@@ -12,6 +12,7 @@ readme = "README.md"
 dependencies = [
     "tping @ git+https://github.com/tango3304/tping.git",
     "scapy",
+    "subprocess",
 ]
 
 [tool.hatch.metadata]
