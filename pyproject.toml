@@ -15,7 +15,6 @@ dependencies = [
 ]
 
 
-[tool.setuptools.packages.find]
-include = [
-    "t_privateip_scraping*",
-]
+[tool.hatch.metadata]
+allow-direct-references = true
+allow-ambiguous-features = true
