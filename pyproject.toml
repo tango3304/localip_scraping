@@ -15,4 +15,5 @@ dependencies = [
 ]
 
 [tool.hatch.metadata]
-allow-direct-references = true
+t_privateip_scraping = ["src/foo"]
+[end of output]
