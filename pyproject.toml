@@ -15,5 +15,5 @@ dependencies = [
 ]
 
 [tool.hatch.metadata]
-packages = ["src/foo"]
+t_privateip_scraping = ["t_privateip_scraping/linux"]
 [end of output]
