@@ -15,4 +15,4 @@ dependencies = [
 ]
 
 [tool.hatch.metadata]
-allow-direct-references = true
+packages = ["src/foo"]
