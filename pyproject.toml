@@ -14,5 +14,8 @@ dependencies = [
     "scapy",
 ]
 
-[tool.hatch.metadata]
-t_privateip_scraping = ["t_privateip_scraping/linux"]
+
+[tool.setuptools.packages.find]
+include = [
+    "t_privateip_scraping*",
+]
