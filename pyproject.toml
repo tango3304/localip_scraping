@@ -16,4 +16,3 @@ dependencies = [
 
 [tool.hatch.metadata]
 t_privateip_scraping = ["t_privateip_scraping/linux"]
-[end of output]
