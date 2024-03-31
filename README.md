@@ -5,7 +5,7 @@ Local IPaddress Scraping Module
 
 ◇Install Command [インストールコマンド]
 
-pip install git+https://github.com/tango3304/privateip_scraping.git
+pip install git+https://github.com/tango3304/t_privateip_scraping.git
 
 DependentPackage: tping
 
