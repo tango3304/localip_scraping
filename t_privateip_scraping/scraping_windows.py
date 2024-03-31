@@ -35,5 +35,3 @@ class IPaddressScraping:
 				ipaddress_true_list = [subprocess.run(['ping','-n','1','-w','1',ipaddress], stdout=subprocess.DEVNULL).returncode for ipaddress in scraping_ipaddress_list]
 				ipaddress_result_list = '\n'.join(f'  PING Connection OK:  {ipaddress}' for ipaddress, ipaddress_true in zip(scraping_ipaddress_list, ipaddress_true_list) if ipaddress_true == 0)
 				print(ipaddress_result_list)
-
-IPaddressScraping.ipaddress_screping(IPaddressScraping.get_host_ipaddress_lists())
