@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "privateip_scraping"
+name = "t_privateip_scraping"
 version = "1.0.2"
 description = "Private IPaddress Scraping"
 requires-python = ">=3.0"
