@@ -16,3 +16,4 @@ dependencies = [
 
 [tool.hatch.metadata]
 packages = ["src/foo"]
+[end of output]
